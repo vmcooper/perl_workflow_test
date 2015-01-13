@@ -1,0 +1,12 @@
+<workflow>
+     <type>Workflow1</type>
+     <time_zone>local</time_zone>
+     <description>This is my workflow.</description>
+     <persister>Persister1</persister>
+
+     <state name="INITIAL">
+        <action name="action1" resulting_state="finished"/>
+     </state>
+
+    <state name="finished" />
+ </workflow>

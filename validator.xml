@@ -1,0 +1,5 @@
+<validators>
+	<validator name="validator1" class="App::Validator::Validator1">
+        <param name="answer" value="London" />
+    </validator>
+</validators>

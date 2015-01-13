@@ -1,0 +1,5 @@
+<persisters>
+    <persister name="Persister1"
+        class="Workflow::Persister::File"
+        path="persister"/>
+</persisters>

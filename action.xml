@@ -1,0 +1,7 @@
+<actions>
+    <action name="action1" class="App::Action::Action1" >
+     	<validator name="validator1">
+            <arg>$city</arg>
+        </validator>
+    </action>
+</actions>
