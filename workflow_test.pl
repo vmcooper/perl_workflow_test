@@ -1,6 +1,7 @@
 use strict;
 use Log::Log4perl     qw( get_logger );
 use Workflow::Factory qw( FACTORY );
+use lib qw(lib);
 
 Log::Log4perl::init( 'log4perl.conf' );
 system('clear');
@@ -20,6 +21,7 @@ while ( $workflow->state eq "INITIAL" ) {
     print "If you answer right the action should change state to 'finished'. Try answering wrong first.\n";
     my $city = get_response( "Capital city of England: " );
     print "You answered - $city\n";
+    $context->param( answer => $city );
     $workflow->execute_action( 'action1' );
 
     if( $workflow->state eq "INITIAL" ) {
