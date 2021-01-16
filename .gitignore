@@ -48,6 +48,8 @@ Temporary Items
 
 # Workflow files
 workflow.log
+*_history
+*_workflow
 
 # carton files
 local

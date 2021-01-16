@@ -1,0 +1,1 @@
+This repository was made as a fork in an attempt to help a user of [perl-workflow](https://github.com/jonasbn/perl-workflow) on [StackOverflow](https://stackoverflow.com/questions/27921691/perl-workflow-module-with-validator/47498915#47498915) - I think it _stranded_, but it is left here to support the answers I provided.
