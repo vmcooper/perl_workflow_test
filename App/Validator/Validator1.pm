@@ -19,25 +19,27 @@ sub _init {
              "declaration of validator ", $self->name;
      }
      print "Answer: ".$params->{answer}."\n";
-     $self->{ answer => $params->{answer} };
+     $self->{answer} = $params->{answer};
 }
 
 sub validate {
-	my ( $self, $wf, $city ) = @_;
+    my ( $self, $wf ) = @_;
+
+    my $city = $wf->context->param('answer');
 
     print "Your answer is being validated!\n";
     print "Your answer is - ".$city."\n";
 
-	my $check;
+    my $check;
 
-	if ( $city eq $self->{answer} ){
-		$check = 1;
-	} else {
-		$check = 0;
-	}
-	unless ( $check ) {
-		validation_error "Validation error!";
-	}
+    if ( $city eq $self->{answer} ){
+        $check = 1;
+    } else {
+        $check = 0;
+    }
+    unless ( $check ) {
+        validation_error "Validation error!";
+    }
 }
 
 1;
